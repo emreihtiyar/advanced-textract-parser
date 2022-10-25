@@ -1,0 +1,181 @@
+{
+    "Blocks": [
+        {
+            "Geometry": {
+                "BoundingBox": {
+                    "Width": 1.0, 
+                    "Top": 0.0, 
+                    "Left": 0.0, 
+                    "Height": 1.0
+                }, 
+                "Polygon": [
+                    {
+                        "Y": 0.0, 
+                        "X": 0.0
+                    }, 
+                    {
+                        "Y": 0.0, 
+                        "X": 1.0
+                    }, 
+                    {
+                        "Y": 1.0, 
+                        "X": 1.0
+                    }, 
+                    {
+                        "Y": 1.0, 
+                        "X": 0.0
+                    }
+                ]
+            }, 
+            "Relationships": [
+                {
+                    "Type": "CHILD", 
+                    "Ids": [
+                        "2602b0a6-20e3-4e6e-9e46-3be57fd0844b", 
+                        "82aedd57-187f-43dd-9eb1-4f312ca30042", 
+                        "52be1777-53f7-42f6-a7cf-6d09bdc15a30", 
+                        "7ca7caa6-00ef-4cda-b1aa-5571dfed1a7c"
+                    ]
+                }
+            ], 
+            "BlockType": "PAGE", 
+            "Id": "8136b2dc-37c1-4300-a9da-6ed8b276ea97"
+        }..... 
+        
+    ], 
+    "DocumentMetadata": {
+        "Pages": 1
+    }
+}
+
+=== Page ===
+
+{
+
+    "Geometry": .... 
+    "Relationships": [
+        {
+            "Type": "CHILD", 
+            "Ids": [
+                "2602b0a6-20e3-4e6e-9e46-3be57fd0844b", // Line - Hello, world.
+                "82aedd57-187f-43dd-9eb1-4f312ca30042", // Line - How are you?
+                "52be1777-53f7-42f6-a7cf-6d09bdc15a30", 
+                "7ca7caa6-00ef-4cda-b1aa-5571dfed1a7c"   
+            ]
+        }
+    ], 
+    "BlockType": "PAGE", 
+    "Id": "8136b2dc-37c1-4300-a9da-6ed8b276ea97"  // Page identifier
+},
+
+=== Lines and Words of Text ===
+{
+    "Relationships": [
+        {
+            "Type": "CHILD", 
+            "Ids": [
+                "7f97e2ca-063e-47a8-981c-8beee31afc01", // Word - Hello,
+                "4b990aa0-af96-4369-b90f-dbe02538ed21"  // Word - world.
+            ]
+        }
+    ], 
+    "Confidence": 99.63229370117188, 
+    "Geometry": {...}, 
+    "Text": "Hello, world.", 
+    "BlockType": "LINE", 
+    "Id": "d7fbd604-d609-4d69-857d-247a3f591238"
+},
+{
+    "Geometry": {...}, 
+    "Text": "Hello,", 
+    "TextType": "PRINTED",
+    "BlockType": "WORD", 
+    "Confidence": 99.74746704101562, 
+    "Id": "7f97e2ca-063e-47a8-981c-8beee31afc01"
+}, 
+
+=== Form Data (Key-Value Pairs) ===
+{
+    "Geometry": .... 
+    "Relationships": [
+        {
+            "Type": "CHILD", 
+            "Ids": [
+                "2602b0a6-20e3-4e6e-9e46-3be57fd0844b", 
+                "82aedd57-187f-43dd-9eb1-4f312ca30042", 
+                "52be1777-53f7-42f6-a7cf-6d09bdc15a30", // Key - Name:
+                "7ca7caa6-00ef-4cda-b1aa-5571dfed1a7c"  // Value - Ana Caroline 
+            ]
+        }
+    ], 
+    "BlockType": "PAGE", 
+    "Id": "8136b2dc-37c1-4300-a9da-6ed8b276ea97"  // Page identifier
+},
+{
+    "Relationships": [
+        {
+            "Type": "VALUE", 
+            "Ids": [
+                "7ca7caa6-00ef-4cda-b1aa-5571dfed1a7c"  // Value identifier
+            ]
+        }, 
+        {
+            "Type": "CHILD", 
+            "Ids": [
+                "c734fca6-c4c4-415c-b6c1-30f7510b72ee"  // Name:
+            ]
+        }
+    ], 
+    "Confidence": 51.55965805053711, 
+    "Geometry": ...., 
+    "BlockType": "KEY_VALUE_SET", 
+    "EntityTypes": [
+        "KEY"
+    ], 
+    "Id": "52be1777-53f7-42f6-a7cf-6d09bdc15a30"  //Key identifier
+},
+{
+    "Relationships": [
+        {
+            "Type": "CHILD", 
+            "Ids": [
+                "db553509-64ef-4ecf-ad3c-bea62cc1cd8a", // Ana
+                "e5d7646c-eaa2-413a-95ad-f4ae19f53ef3"  // Carolina
+            ]
+        }
+    ], 
+    "Confidence": 51.55965805053711, 
+    "Geometry": ...., 
+    "BlockType": "KEY_VALUE_SET", 
+    "EntityTypes": [
+        "VALUE"
+    ], 
+    "Id": "7ca7caa6-00ef-4cda-b1aa-5571dfed1a7c" // Value identifier
+}
+{
+    "Geometry": {...}, 
+    "Text": "Name:", 
+    "TextType": "PRINTED".
+    "BlockType": "WORD", 
+    "Confidence": 99.56285858154297, 
+    "Id": "c734fca6-c4c4-415c-b6c1-30f7510b72ee"
+},
+{
+    "Geometry": {...}, 
+    "Text": "Ana", 
+    "TextType": "PRINTED",
+    "BlockType": "WORD", 
+    "Confidence": 99.52057647705078, 
+    "Id": "db553509-64ef-4ecf-ad3c-bea62cc1cd8a"
+}, 
+{
+    "Geometry": {...}, 
+    "Text": "Carolina", 
+    "TextType": "PRINTED",
+    "BlockType": "WORD", 
+    "Confidence": 99.84207916259766, 
+    "Id": "e5d7646c-eaa2-413a-95ad-f4ae19f53ef3"
+},
+
+=== TABLES ===
+
