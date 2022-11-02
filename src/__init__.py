@@ -5,28 +5,7 @@ More info @ https://github.com/emreihtiyar/advanced-textract-parser
 
 __version__ = "0.0.1"
 
-import enum
-
-
-class JobStatus(enum.Enum):
-    """Job status enum"""
-    PENDING = 0
-    IN_PROGRESS = 1
-    SUCCEEDED = 2
-    FAILED = 3
-    
-    @classmethod
-    def from_str(cls, label):
-        if label in ('SUCCEEDED', 'succeeded', 'Succeeded'):
-            return cls.SUCCEEDED
-        elif label in ('FAILED', 'failed', 'Failed'):
-            return cls.FAILED
-        elif label in ('IN_PROGRESS', 'in_progress', 'In_progress'):
-            return cls.IN_PROGRESS
-        elif label in ('PENDING', 'pending', 'Pending'):
-            return cls.PENDING
-        else:
-            raise NotImplementedError('Unknown job status: {}'.format(label))
+from src.Types import JobStatus
 
 
 class DocumentMetadata:
@@ -44,7 +23,13 @@ class DocumentMetadata:
 class TextractDocument:
     analyze_document_model_version = "1.0"
     
-    def __init__(self, blocks:list, document_metadata:DocumentMetadata, job_status:JobStatus, analyze_document_model_version="1.0"):
+    def __init__(
+            self, 
+            blocks:list, 
+            document_metadata:DocumentMetadata, 
+            job_status:JobStatus, 
+            analyze_document_model_version="1.0"
+            ) -> None:
         self.blocks = blocks
         self.document_metadata = document_metadata
         self.job_status = job_status
